@@ -1,0 +1,14 @@
+export const TOOLS = [
+  { id: 'json-formatter', name: 'JSON Formatter', icon: '{ }', category: 'Data', desc: 'Format & validate JSON' },
+  { id: 'yaml-json-converter', name: 'YAML ↔ JSON', icon: '⇄', category: 'Data', desc: 'Convert YAML to JSON and back' },
+  { id: 'base64-encoder', name: 'Base64', icon: 'B64', category: 'Encoding', desc: 'Encode & decode Base64' },
+  { id: 'jwt-decoder', name: 'JWT Decoder', icon: '🔑', category: 'Security', desc: 'Decode JWT tokens' },
+  { id: 'url-encoder', name: 'URL Encoder', icon: '%', category: 'Encoding', desc: 'Encode & decode URLs' },
+  { id: 'hash-generator', name: 'Hash Generator', icon: '#', category: 'Security', desc: 'SHA-1/256/384/512 hashes' },
+  { id: 'uuid-generator', name: 'UUID Generator', icon: '◆', category: 'Generators', desc: 'Generate UUID v4' },
+  { id: 'regex-tester', name: 'Regex Tester', icon: '.*', category: 'Text', desc: 'Test regular expressions' },
+  { id: 'timestamp-converter', name: 'Timestamp', icon: '⏱', category: 'Date', desc: 'Unix timestamp converter' },
+  { id: 'color-converter', name: 'Color Converter', icon: '🎨', category: 'Design', desc: 'HEX/RGB/HSL converter' },
+  { id: 'lorem-ipsum-generator', name: 'Lorem Ipsum', icon: '¶', category: 'Generators', desc: 'Placeholder text generator' },
+  { id: 'diff-checker', name: 'Diff Checker', icon: '±', category: 'Text', desc: 'Compare two texts' },
+];
