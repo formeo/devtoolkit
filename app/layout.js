@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import ClientLayout from '../components/ClientLayout';
 
 const SITE_URL = 'https://devtoolkit.site/';
@@ -38,19 +39,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BM1N2VKHD2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BM1N2VKHD2');
-</script>
-      </head>
+      <head />
       <body className="antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BM1N2VKHD2"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BM1N2VKHD2');
+          `}
+        </Script>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
