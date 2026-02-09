@@ -1,7 +1,8 @@
 import './globals.css';
+import Script from 'next/script';
 import ClientLayout from '../components/ClientLayout';
 
-const SITE_URL = 'https://devtoolkit.dev'; // CHANGE to your domain
+const SITE_URL = 'https://devtoolkit.site/';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -38,15 +39,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google AdSense — replace ca-pub-XXXXXXX with your publisher ID */}
-        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous"></script> */}
-
-        {/* Google Analytics — replace G-XXXXXXX with your measurement ID */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> */}
-        {/* <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');` }} /> */}
-      </head>
+      <head />
       <body className="antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BM1N2VKHD2"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BM1N2VKHD2');
+          `}
+        </Script>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

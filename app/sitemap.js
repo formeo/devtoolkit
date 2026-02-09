@@ -1,4 +1,4 @@
-const SITE_URL = 'https://www.devtoolkit.site';
+const SITE_URL = 'https://devtoolkit.site';
 
 export default function sitemap() {
   const tools = [
