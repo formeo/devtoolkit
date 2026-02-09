@@ -1,7 +1,7 @@
 import './globals.css';
 import ClientLayout from '../components/ClientLayout';
 
-const SITE_URL = 'https://devtoolkit.dev'; // CHANGE to your domain
+const SITE_URL = 'https://devtoolkit.site/';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

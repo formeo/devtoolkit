@@ -1,4 +1,4 @@
-const SITE_URL = 'https://devtoolkit.dev'; // CHANGE to your domain
+const SITE_URL = 'https://devtoolkit.site';
 
 export default function sitemap() {
   const tools = [

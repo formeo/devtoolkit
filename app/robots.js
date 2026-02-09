@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://devtoolkit.dev/sitemap.xml', // CHANGE to your domain
+    sitemap: 'https://devtoolkit.site/sitemap.xml',
   };
 }
