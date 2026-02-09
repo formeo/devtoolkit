@@ -11,4 +11,7 @@ export const TOOLS = [
   { id: 'color-converter', name: 'Color Converter', icon: '🎨', category: 'Design', desc: 'HEX/RGB/HSL converter' },
   { id: 'lorem-ipsum-generator', name: 'Lorem Ipsum', icon: '¶', category: 'Generators', desc: 'Placeholder text generator' },
   { id: 'diff-checker', name: 'Diff Checker', icon: '±', category: 'Text', desc: 'Compare two texts' },
+  { id: 'password-generator', name: 'Password Generator', icon: '🔒', category: 'Security', desc: 'Strong random passwords' },
+  { id: 'qr-code-generator', name: 'QR Code Generator', icon: '▣', category: 'Generators', desc: 'Create QR codes' },
+  { id: 'sql-formatter', name: 'SQL Formatter', icon: 'SQL', category: 'Data', desc: 'Format & beautify SQL' },
 ];

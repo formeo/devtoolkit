@@ -78,6 +78,9 @@ export default function HomePage() {
           <p><strong className="text-dark-200">Color Converter</strong> — Convert between HEX, RGB, and HSL color formats with a live color preview.</p>
           <p><strong className="text-dark-200">Lorem Ipsum Generator</strong> — Generate placeholder text in words, sentences, or paragraphs for your designs.</p>
           <p><strong className="text-dark-200">Text Diff Checker</strong> — Compare two texts side by side and see differences highlighted line by line.</p>
+          <p><strong className="text-dark-200">Password Generator</strong> — Generate strong, secure random passwords with customizable length, characters, and complexity. Uses crypto.getRandomValues() for true randomness.</p>
+          <p><strong className="text-dark-200">QR Code Generator</strong> — Create QR codes for URLs, text, Wi-Fi networks, email, and phone numbers. Download as PNG or SVG with custom colors and sizes.</p>
+          <p><strong className="text-dark-200">SQL Formatter</strong> — Format and beautify SQL queries online. Supports MySQL, PostgreSQL, SQL Server, Oracle, SQLite, BigQuery, and more.</p>
         </div>
       </section>
     </div>

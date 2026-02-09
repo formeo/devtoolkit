@@ -1,4 +1,4 @@
-const SITE_URL = 'https://devtoolkit.site';
+const SITE_URL = 'https://www.devtoolkit.site';
 
 export default function sitemap() {
   const tools = [
@@ -14,6 +14,9 @@ export default function sitemap() {
     'color-converter',
     'lorem-ipsum-generator',
     'diff-checker',
+    'password-generator',
+    'qr-code-generator',
+    'sql-formatter',
   ];
 
   return [
