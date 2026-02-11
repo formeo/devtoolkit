@@ -81,6 +81,8 @@ export default function HomePage() {
           <p><strong className="text-dark-200">Password Generator</strong> — Generate strong, secure random passwords with customizable length, characters, and complexity. Uses crypto.getRandomValues() for true randomness.</p>
           <p><strong className="text-dark-200">QR Code Generator</strong> — Create QR codes for URLs, text, Wi-Fi networks, email, and phone numbers. Download as PNG or SVG with custom colors and sizes.</p>
           <p><strong className="text-dark-200">SQL Formatter</strong> — Format and beautify SQL queries online. Supports MySQL, PostgreSQL, SQL Server, Oracle, SQLite, BigQuery, and more.</p>
+          <p><strong className="text-dark-200">Cron Expression Parser</strong> — Parse and generate cron expressions with human-readable descriptions. See next execution times, use quick presets for common schedules like &quot;every 5 minutes&quot; or &quot;weekdays at 9 AM&quot;.</p>
+          <p><strong className="text-dark-200">PostgreSQL Config Generator</strong> — Generate optimized postgresql.conf settings based on your server hardware. Set shared_buffers, work_mem, effective_cache_size and more. Free PGTune alternative.</p>
         </div>
       </section>
     </div>

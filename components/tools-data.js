@@ -14,4 +14,6 @@ export const TOOLS = [
   { id: 'password-generator', name: 'Password Generator', icon: '🔒', category: 'Security', desc: 'Strong random passwords' },
   { id: 'qr-code-generator', name: 'QR Code Generator', icon: '▣', category: 'Generators', desc: 'Create QR codes' },
   { id: 'sql-formatter', name: 'SQL Formatter', icon: 'SQL', category: 'Data', desc: 'Format & beautify SQL' },
+  { id: 'cron-parser', name: 'Cron Parser', icon: '⏰', category: 'DevOps', desc: 'Parse & build cron schedules' },
+  { id: 'postgres-config', name: 'PG Config', icon: '🐘', category: 'DevOps', desc: 'Tune postgresql.conf' },
 ];

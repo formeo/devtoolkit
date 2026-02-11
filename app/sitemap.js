@@ -17,6 +17,8 @@ export default function sitemap() {
     'password-generator',
     'qr-code-generator',
     'sql-formatter',
+    'cron-parser',
+    'postgres-config',
   ];
 
   return [
