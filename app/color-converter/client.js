@@ -51,6 +51,15 @@ export default function Client() {
             style={{ background: c, border: hex === c ? '2px solid #fff' : '2px solid #334155' }} />
         ))}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Color Conversion</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>HEX, RGB, and HSL are three common ways to represent colors in web development. HEX codes like #22d3ee are used in CSS, design tools, and brand guidelines. RGB (Red, Green, Blue) defines colors by mixing light channels from 0-255. HSL (Hue, Saturation, Lightness) is more intuitive for adjusting brightness and vibrancy.</p>
+          <p>This converter instantly translates between all three formats with a live preview. Useful for CSS development, Tailwind color customization, Figma-to-code workflows, and accessibility contrast checks. All conversions happen locally in your browser.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

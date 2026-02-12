@@ -48,6 +48,15 @@ export default function Client() {
           </div>
         ))}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About UUIDs</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>UUID (Universally Unique Identifier) v4 generates 128-bit random identifiers with a collision probability so low it is practically impossible. UUIDs are used as primary keys in distributed databases, session tokens, API keys, file identifiers, and message queue correlation IDs.</p>
+          <p>This generator uses crypto.getRandomValues() for cryptographically secure randomness. Generate UUIDs in multiple formats: standard lowercase, uppercase, without dashes, and with braces. Bulk generate multiple UUIDs and copy them all with one click.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

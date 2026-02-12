@@ -60,6 +60,15 @@ export default function Client() {
           </div>
         ))}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Regular Expressions</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>Regular expressions (regex) are patterns used to match, search, and extract text. They power input validation, log parsing, search-and-replace operations, and data extraction in every programming language. Mastering regex is essential for backend development, DevOps, and data engineering.</p>
+          <p>This tester highlights matches in real-time as you type, shows captured groups, and supports all JavaScript regex flags (global, case-insensitive, multiline, dotAll, unicode). Test patterns for email validation, URL parsing, log filtering, or CSV field extraction &mdash; all in your browser.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

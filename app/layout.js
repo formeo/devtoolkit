@@ -1,8 +1,12 @@
 import './globals.css';
 import Script from 'next/script';
+import { DM_Sans, JetBrains_Mono } from 'next/font/google';
 import ClientLayout from '../components/ClientLayout';
 
-const SITE_URL = 'https://devtoolkit.site/';
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-sans', display: 'swap' });
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono', display: 'swap' });
+
+const SITE_URL = 'https://www.devtoolkit.site';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -40,7 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head />
-      <body className="antialiased">
+      <body className={`antialiased ${dmSans.variable} ${jetbrainsMono.variable}`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BM1N2VKHD2"
           strategy="afterInteractive"

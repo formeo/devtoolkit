@@ -29,6 +29,15 @@ export default function Client() {
           <textarea className={textareaClass} value={output} readOnly rows={6} />
         </div>
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About URL Encoding</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>URL encoding (percent-encoding) converts special characters into a format that can be safely transmitted in URLs. Characters like spaces, ampersands, and Unicode are replaced with %XX codes. This is required for query parameters, form data, API requests, and redirect URLs.</p>
+          <p>This tool encodes and decodes URL components with full Unicode support, handling international characters, emoji, and special symbols. Essential for debugging query strings, building OAuth callbacks, testing webhook URLs, and working with REST APIs.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

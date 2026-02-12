@@ -151,6 +151,15 @@ export default function Client() {
           );
         })}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Password Security</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>Strong passwords are the first line of defense against brute-force attacks and credential stuffing. A good password should be at least 16 characters long, contain uppercase and lowercase letters, numbers, and symbols, and never be reused across services.</p>
+          <p>This generator uses crypto.getRandomValues() &mdash; the same cryptographic API used by password managers like 1Password and Bitwarden. Unlike Math.random(), it produces truly unpredictable values. All generation happens in your browser &mdash; no passwords are transmitted or stored anywhere.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

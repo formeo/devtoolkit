@@ -50,6 +50,15 @@ export default function Client() {
           </div>
         ))}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Text Diff Checking</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>A diff checker compares two blocks of text and highlights the differences line by line &mdash; additions, deletions, and modifications. It works like git diff but for any text: code, configuration files, JSON responses, database records, or document revisions.</p>
+          <p>Common uses include comparing API responses before and after changes, reviewing config file modifications, checking translation differences, and verifying data migration output. This tool runs entirely in your browser &mdash; your text is never sent to any server.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

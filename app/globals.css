@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -11,7 +9,7 @@
 body {
   background: #020617;
   color: #e2e8f0;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: var(--font-sans), 'DM Sans', system-ui, sans-serif;
 }
 
 textarea:focus, input:focus, select:focus {

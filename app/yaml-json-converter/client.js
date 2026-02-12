@@ -74,6 +74,15 @@ export default function YAMLJSONClient() {
           <textarea className={textareaClass} value={output} readOnly rows={14} />
         </div>
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About YAML and JSON Conversion</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>YAML and JSON are the two dominant configuration formats in modern development. JSON is used in APIs, package.json, tsconfig, and browser storage. YAML is preferred for Kubernetes manifests, Docker Compose, GitHub Actions, Ansible playbooks, and CI/CD pipelines because of its readability and comment support.</p>
+          <p>Converting between them is a daily task: paste a Kubernetes YAML to check its JSON structure, convert an API response to YAML for documentation, or transform docker-compose.yml to JSON for programmatic processing. This converter handles nested objects, arrays, and multi-document YAML.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

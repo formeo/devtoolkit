@@ -36,6 +36,15 @@ export default function Client() {
           <textarea className={`${textareaClass} text-purple-400`} value={payload} readOnly rows={6} />
         </div>
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About JWT Tokens</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>JSON Web Tokens (JWT) are the standard for stateless authentication in modern web applications. A JWT has three parts: header (algorithm and type), payload (claims like user ID, roles, and expiration), and signature. The header and payload are Base64URL-encoded, not encrypted &mdash; anyone can read them.</p>
+          <p>This decoder splits a JWT into its components, shows all claims in a readable format, and checks if the token is expired. Essential for debugging OAuth2 flows, API authentication issues, and SSO integrations. No data is sent to any server &mdash; your tokens stay in your browser.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

@@ -35,6 +35,15 @@ export default function Client() {
           </div>
         ))}
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Cryptographic Hashing</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>Cryptographic hash functions produce a fixed-size digest from any input. SHA-256 is used in Bitcoin, TLS certificates, and file integrity checks. SHA-1, while deprecated for security, is still used in git commits. SHA-512 offers higher security for password hashing and digital signatures.</p>
+          <p>This tool uses the Web Crypto API built into your browser &mdash; the most secure way to generate hashes client-side. No data leaves your machine. Useful for verifying file checksums, generating content fingerprints, and testing hash-based authentication flows.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

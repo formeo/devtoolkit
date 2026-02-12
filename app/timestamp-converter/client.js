@@ -46,6 +46,15 @@ export default function Client() {
       <input className={`${inputClass} mb-4`} value={ts} onChange={e => setTs(e.target.value)} placeholder="1234567890" />
       <label className={labelClass}>Converted Date</label>
       <textarea className={textareaClass} value={dateStr} readOnly rows={4} />
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Unix Timestamps</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>A Unix timestamp (epoch time) is the number of seconds since January 1, 1970 UTC. It is the universal time format in databases, APIs, log files, and system events. Converting between timestamps and human-readable dates is a daily task for developers working with PostgreSQL, MySQL, Elasticsearch, or cloud services.</p>
+          <p>This converter handles both seconds and milliseconds precision, shows your local timezone, and includes a live clock showing the current epoch time. Useful for debugging API timestamps, parsing log files, and working with cron jobs.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

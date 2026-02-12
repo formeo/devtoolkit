@@ -5,7 +5,7 @@ import ToolLayout from '../../components/ToolLayout';
 import { textareaClass, inputClass, btnPrimary, btnSecondary, labelClass, selectClass } from '../../components/styles';
 
 const PRESETS = {
-  text: { label: 'Text / URL', placeholder: 'https://devtoolkit.site', template: (v) => v },
+  text: { label: 'Text / URL', placeholder: 'https://www.devtoolkit.site', template: (v) => v },
   wifi: { label: 'Wi-Fi', placeholder: '', template: (v, opts) => `WIFI:T:${opts.encryption};S:${opts.ssid};P:${opts.wifiPass};;` },
   email: { label: 'Email', placeholder: '', template: (v, opts) => `mailto:${opts.email}?subject=${encodeURIComponent(opts.subject)}&body=${encodeURIComponent(opts.body)}` },
   phone: { label: 'Phone', placeholder: '+1234567890', template: (v) => `tel:${v}` },
@@ -13,7 +13,7 @@ const PRESETS = {
 
 export default function Client() {
   const [mode, setMode] = useState('text');
-  const [text, setText] = useState('https://devtoolkit.site');
+  const [text, setText] = useState('https://www.devtoolkit.site');
   const [wifiOpts, setWifiOpts] = useState({ ssid: 'MyNetwork', wifiPass: 'password123', encryption: 'WPA' });
   const [emailOpts, setEmailOpts] = useState({ email: 'hello@example.com', subject: 'Hello', body: '' });
   const [size, setSize] = useState(300);
@@ -185,6 +185,15 @@ export default function Client() {
           </div>
         </div>
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About QR Codes</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>QR codes encode data in a two-dimensional barcode that can be scanned by any smartphone camera. They support URLs, plain text, Wi-Fi credentials, email addresses, phone numbers, and more. QR codes are used in marketing, event tickets, restaurant menus, payment systems, and two-factor authentication.</p>
+          <p>This generator creates QR codes instantly with customizable colors and sizes. Download as PNG for print materials or SVG for scalable graphics. All generation happens locally using the qrcode library &mdash; no data is sent to any server.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

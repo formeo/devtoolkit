@@ -141,6 +141,15 @@ export default function Client() {
           ))}
         </div>
       </div>
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About SQL Formatting</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>SQL formatting transforms dense, single-line queries into readable, indented code with proper keyword alignment. This is essential for code reviews, documentation, debugging complex JOINs, and maintaining consistent coding standards across teams.</p>
+          <p>This formatter supports all major SQL dialects: MySQL, PostgreSQL, SQL Server (T-SQL), Oracle PL/SQL, SQLite, BigQuery, Amazon Redshift, and Snowflake. It handles subqueries, CTEs, window functions, and multi-statement scripts. Powered by the sql-formatter library, running entirely in your browser.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }

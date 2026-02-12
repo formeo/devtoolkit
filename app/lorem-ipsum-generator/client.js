@@ -37,6 +37,15 @@ export default function Client() {
         <button onClick={() => navigator.clipboard?.writeText(output)} className={btnSecondary}>Copy</button>
       </div>
       <textarea className={textareaClass} value={output} readOnly rows={12} />
+    
+      {/* SEO content */}
+      <section className="mt-10 border-t border-dark-700 pt-6">
+        <h2 className="text-base font-bold text-dark-200 mb-3">About Lorem Ipsum</h2>
+        <div className="text-xs text-dark-400 leading-relaxed space-y-2">
+          <p>Lorem Ipsum is placeholder text used since the 1500s in typesetting and now in web and UI design. It lets designers and developers focus on layout, typography, and spacing without being distracted by readable content.</p>
+          <p>Generate words, sentences, or paragraphs of Lorem Ipsum text for mockups, wireframes, Figma prototypes, HTML templates, and testing content management systems. Copy with one click and paste into your project.</p>
+        </div>
+      </section>
     </ToolLayout>
   );
 }
