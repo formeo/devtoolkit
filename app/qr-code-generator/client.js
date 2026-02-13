@@ -5,7 +5,7 @@ import ToolLayout from '../../components/ToolLayout';
 import { textareaClass, inputClass, btnPrimary, btnSecondary, labelClass, selectClass } from '../../components/styles';
 
 const PRESETS = {
-  text: { label: 'Text / URL', placeholder: 'https://www.devtoolkit.site', template: (v) => v },
+  text: { label: 'Text / URL', placeholder: 'https://devtoolkit.site', template: (v) => v },
   wifi: { label: 'Wi-Fi', placeholder: '', template: (v, opts) => `WIFI:T:${opts.encryption};S:${opts.ssid};P:${opts.wifiPass};;` },
   email: { label: 'Email', placeholder: '', template: (v, opts) => `mailto:${opts.email}?subject=${encodeURIComponent(opts.subject)}&body=${encodeURIComponent(opts.body)}` },
   phone: { label: 'Phone', placeholder: '+1234567890', template: (v) => `tel:${v}` },
@@ -13,7 +13,7 @@ const PRESETS = {
 
 export default function Client() {
   const [mode, setMode] = useState('text');
-  const [text, setText] = useState('https://www.devtoolkit.site');
+  const [text, setText] = useState('https://devtoolkit.site');
   const [wifiOpts, setWifiOpts] = useState({ ssid: 'MyNetwork', wifiPass: 'password123', encryption: 'WPA' });
   const [emailOpts, setEmailOpts] = useState({ email: 'hello@example.com', subject: 'Hello', body: '' });
   const [size, setSize] = useState(300);

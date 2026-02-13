@@ -19,6 +19,8 @@ export default function sitemap() {
     'sql-formatter',
     'cron-parser',
     'postgres-config',
+    'json-tree-viewer',
+    'http-status-codes',
   ];
 
   return [

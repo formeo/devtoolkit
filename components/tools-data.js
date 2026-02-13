@@ -16,4 +16,6 @@ export const TOOLS = [
   { id: 'sql-formatter', name: 'SQL Formatter', icon: 'SQL', category: 'Data', desc: 'Format & beautify SQL' },
   { id: 'cron-parser', name: 'Cron Parser', icon: '⏰', category: 'DevOps', desc: 'Parse & build cron schedules' },
   { id: 'postgres-config', name: 'PG Config', icon: '🐘', category: 'DevOps', desc: 'Tune postgresql.conf' },
+  { id: 'json-tree-viewer', name: 'JSON Tree', icon: '🌳', category: 'Data', desc: 'Visualize JSON as a tree' },
+  { id: 'http-status-codes', name: 'HTTP Codes', icon: '↩', category: 'Reference', desc: 'HTTP status code lookup' },
 ];
