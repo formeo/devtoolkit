@@ -18,4 +18,5 @@ export const TOOLS = [
   { id: 'postgres-config', name: 'PG Config', icon: '🐘', category: 'DevOps', desc: 'Tune postgresql.conf' },
   { id: 'json-tree-viewer', name: 'JSON Tree', icon: '🌳', category: 'Data', desc: 'Visualize JSON as a tree' },
   { id: 'http-status-codes', name: 'HTTP Codes', icon: '↩', category: 'Reference', desc: 'HTTP status code lookup' },
+  { id: 'gitlab-ci-generator', name: 'GitLab CI', icon: '🦊', category: 'DevOps', desc: 'Build .gitlab-ci.yml pipelines' },
 ];

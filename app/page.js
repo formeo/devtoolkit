@@ -85,6 +85,7 @@ export default function HomePage() {
           <p><strong className="text-dark-200">PostgreSQL Config Generator</strong> — Generate optimized postgresql.conf settings based on your server hardware. Set shared_buffers, work_mem, effective_cache_size and more. Free PGTune alternative.</p>
           <p><strong className="text-dark-200">JSON Tree Viewer</strong> — Visualize JSON as an interactive collapsible tree. See data types, array sizes, nesting depth, search keys, and copy node paths like response.data[0].user.name with one click.</p>
           <p><strong className="text-dark-200">HTTP Status Codes Reference</strong> — Look up any HTTP status code instantly. Get clear explanations of what each code means, when it occurs, and how to fix it. Covers all codes from 100 to 511.</p>
+          <p><strong className="text-dark-200">GitLab CI/CD Generator</strong> — Build .gitlab-ci.yml pipelines visually. Pick your language (Node.js, Python, Go, Java, Rust, PHP, Ruby, .NET), configure lint, test, build, and deploy stages. Supports Docker builds, Kubernetes, SSH, AWS ECS, and GitLab Pages deployment.</p>
         </div>
       </section>
     </div>

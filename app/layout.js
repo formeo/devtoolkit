@@ -14,8 +14,8 @@ export const metadata = {
     default: 'DevToolKit — Free Online Developer Tools',
     template: '%s | DevToolKit',
   },
-  description: 'Free online developer tools: JSON formatter, Base64 encoder, JWT decoder, UUID generator, regex tester, cron parser, PostgreSQL config generator, and more. No sign-up, runs in your browser.',
-  keywords: ['developer tools', 'json formatter', 'base64 encoder', 'uuid generator', 'online tools', 'web developer utilities', 'cron parser', 'postgresql config generator', 'pgtune alternative'],
+  description: 'Free online developer tools: JSON formatter, Base64 encoder, JWT decoder, GitLab CI generator, cron parser, PostgreSQL config, and more. No sign-up, runs in your browser.',
+  keywords: ['developer tools', 'json formatter', 'base64 encoder', 'gitlab ci generator', 'online tools', 'web developer utilities', 'cron parser', 'postgresql config generator'],
   authors: [{ name: 'DevToolKit' }],
   icons: {
     icon: [
@@ -26,12 +26,12 @@ export const metadata = {
   },
   openGraph: {
     title: 'DevToolKit — Free Online Developer Tools',
-    description: 'Free browser-based developer utilities. JSON, Base64, JWT, UUID, Regex, Hash, Cron, PostgreSQL config, and more.',
+    description: 'Free browser-based developer utilities. JSON, Base64, JWT, GitLab CI, Cron, PostgreSQL config, and more.',
     url: SITE_URL,
     siteName: 'DevToolKit',
     type: 'website',
     locale: 'en_US',
-    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'DevToolKit — 19 Free Developer Tools' }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'DevToolKit — 20 Free Developer Tools' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -61,12 +61,12 @@ export default function RootLayout({ children }) {
               "@type": "WebApplication",
               "name": "DevToolKit",
               "url": "https://www.devtoolkit.site",
-              "description": "Free online developer tools: JSON formatter, Base64 encoder, JWT decoder, UUID generator, regex tester, cron parser, PostgreSQL config generator, and more.",
+              "description": "Free online developer tools: JSON formatter, Base64 encoder, JWT decoder, GitLab CI generator, cron parser, PostgreSQL config, and more.",
               "applicationCategory": "DeveloperApplication",
               "operatingSystem": "Any",
               "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
               "browserRequirements": "Requires a modern web browser",
-              "featureList": "JSON Formatter, JSON Tree Viewer, YAML-JSON Converter, Base64 Encoder, JWT Decoder, URL Encoder, Hash Generator, UUID Generator, Regex Tester, Timestamp Converter, Color Converter, Lorem Ipsum Generator, Diff Checker, Password Generator, QR Code Generator, SQL Formatter, Cron Parser, PostgreSQL Config Generator, HTTP Status Codes"
+              "featureList": "JSON Formatter, JSON Tree Viewer, YAML-JSON Converter, Base64 Encoder, JWT Decoder, URL Encoder, Hash Generator, UUID Generator, Regex Tester, Timestamp Converter, Color Converter, Lorem Ipsum Generator, Diff Checker, Password Generator, QR Code Generator, SQL Formatter, Cron Parser, PostgreSQL Config Generator, HTTP Status Codes, GitLab CI/CD Generator"
             })
           }}
         />

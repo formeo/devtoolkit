@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Privacy Policy',
-  description: 'DevToolKit privacy policy. All tools run client-side in your browser. No data is collected, stored, or sent to any server. No cookies, no tracking.', alternates: { canonical: '/privacy/' },
+  description: 'Privacy policy for DevToolKit — free online developer tools.',
 };
 
 export default function PrivacyPage() {
