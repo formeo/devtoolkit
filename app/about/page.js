@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'About DevToolKit',
-  description: 'About DevToolKit — free, open-source, browser-based developer tools.',
+  title: 'About DevToolKit — Free Browser-Based Developer Tools',
+  description: 'DevToolKit is a collection of 19 free, browser-based developer tools. No signup, no tracking, everything runs client-side. Built with Next.js.', alternates: { canonical: '/about/' },
 };
 
 export default function AboutPage() {
