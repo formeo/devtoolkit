@@ -172,10 +172,21 @@ export default function Client() {
 
       {/* SEO content */}
       <section className="mt-10 border-t border-dark-700 pt-6">
-        <h2 className="text-base font-bold text-dark-200 mb-3">About HTTP Status Codes</h2>
+        <h2 className="text-base font-bold text-dark-200 mb-3">HTTP Status Code Reference — Complete Guide</h2>
         <div className="text-xs text-dark-400 leading-relaxed space-y-2">
-          <p>HTTP status codes are three-digit numbers returned by a server in response to a client request. They are grouped into five classes: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error). Understanding these codes is essential for debugging APIs, web applications, and server infrastructure.</p>
-          <p>The most commonly encountered codes are 200 (OK), 301 (Moved Permanently), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 500 (Internal Server Error), and 502 (Bad Gateway). Each has specific causes and solutions. This reference covers {CODES.length} status codes with practical explanations of when they occur and how to resolve them.</p>
+          <p>HTTP status codes are three-digit numbers returned by a web server in response to every request. They tell the client whether the request succeeded, was redirected, or failed — and why. This reference covers all standard codes with practical explanations, real-world causes, and actionable fixes.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">HTTP Status Code Categories</h3>
+          <p><strong className="text-dark-300">1xx Informational</strong> — server received the request, continuing to process. Rarely seen except 101 (WebSocket upgrade). <strong className="text-dark-300">2xx Success</strong> — request was accepted. 200 OK is the most common. 201 Created is returned after successful POST. 204 No Content for successful DELETE with no response body.</p>
+          <p><strong className="text-dark-300">3xx Redirection</strong> — client needs additional action. 301 Moved Permanently passes SEO authority. 302 Found is temporary redirect. 304 Not Modified tells the browser to use cache. <strong className="text-dark-300">4xx Client Errors</strong> — request has a problem. 400 Bad Request = malformed syntax. 401 Unauthorized = missing auth. 403 Forbidden = authenticated but not authorized. 404 Not Found is the most well-known error.</p>
+          <p><strong className="text-dark-300">5xx Server Errors</strong> — server failed to fulfill a valid request. 500 Internal Server Error is a catch-all. 502 Bad Gateway = upstream returned invalid response (common with nginx). 503 Service Unavailable = overloaded or maintenance. 504 Gateway Timeout = upstream didn&apos;t respond in time.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">Most Common HTTP Errors and How to Fix Them</h3>
+          <p><strong className="text-dark-300">404 Not Found</strong> — check URL for typos, verify resource exists, check rewrite rules, confirm the route is defined. <strong className="text-dark-300">500 Internal Server Error</strong> — check application logs (not web server logs), look for unhandled exceptions, database failures, or missing env variables. <strong className="text-dark-300">502 Bad Gateway</strong> — verify upstream app is running, check port matches proxy config, review memory limits (common: app OOM-killed).</p>
+          <p><strong className="text-dark-300">429 Too Many Requests</strong> — you&apos;re hitting a rate limit. Implement exponential backoff and respect Retry-After headers. <strong className="text-dark-300">401 vs 403</strong> — 401 means &quot;who are you?&quot; (authentication needed), 403 means &quot;I know who you are, but access denied&quot; (authorization).</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">HTTP Status Codes for REST APIs</h3>
+          <p>Best practices: return <strong className="text-dark-300">201</strong> for resource creation with a Location header, <strong className="text-dark-300">204</strong> for successful deletions, <strong className="text-dark-300">400</strong> for validation errors with details in the body, <strong className="text-dark-300">409 Conflict</strong> for duplicates, and <strong className="text-dark-300">422 Unprocessable Entity</strong> for semantically wrong requests. Include machine-readable error codes alongside HTTP status for easier client handling.</p>
         </div>
       </section>
     </ToolLayout>

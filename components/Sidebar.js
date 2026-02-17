@@ -103,6 +103,7 @@ export default function Sidebar() {
         {(open || mobileOpen) && (
           <div className="p-4 border-t border-dark-700 text-[11px] text-dark-600 leading-relaxed">
             <div className="flex gap-3 mb-2">
+              <Link href="/blog/" className="text-dark-400 hover:text-dark-200 no-underline">Blog</Link>
               <Link href="/about/" className="text-dark-400 hover:text-dark-200 no-underline">About</Link>
               <Link href="/privacy/" className="text-dark-400 hover:text-dark-200 no-underline">Privacy</Link>
             </div>

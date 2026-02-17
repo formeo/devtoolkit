@@ -53,10 +53,20 @@ export default function JSONFormatterClient() {
     
       {/* SEO content */}
       <section className="mt-10 border-t border-dark-700 pt-6">
-        <h2 className="text-base font-bold text-dark-200 mb-3">About JSON Formatting</h2>
+        <h2 className="text-base font-bold text-dark-200 mb-3">Online JSON Formatter, Validator & Beautifier</h2>
         <div className="text-xs text-dark-400 leading-relaxed space-y-2">
-          <p>JSON (JavaScript Object Notation) is the most widely used data format in web APIs, configuration files, and data exchange. Minified JSON saves bandwidth but is unreadable. A JSON formatter adds indentation and line breaks, making nested objects and arrays easy to inspect and debug.</p>
-          <p>This tool validates JSON syntax, highlights errors with line numbers, and lets you switch between 2-space, 4-space, and tab indentation. Use it to debug API responses, format package.json, validate webhook payloads, or beautify MongoDB documents. Everything runs in your browser &mdash; your data stays private.</p>
+          <p>JSON (JavaScript Object Notation) is the most widely used data interchange format for web APIs, configuration files, databases, and data pipelines. This free online JSON formatter validates syntax, highlights errors with precise line numbers, and lets you beautify minified JSON with customizable indentation.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">When to Use a JSON Formatter</h3>
+          <p><strong className="text-dark-300">Debugging API responses</strong> — paste raw output from curl, Postman, or browser DevTools to see the data structure clearly. <strong className="text-dark-300">Editing config files</strong> — format package.json, tsconfig.json, .eslintrc for readability. <strong className="text-dark-300">Validating webhooks</strong> — check that incoming JSON from Stripe, GitHub, or Slack is well-formed. <strong className="text-dark-300">Working with databases</strong> — format MongoDB documents, Elasticsearch queries, or DynamoDB items.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">Common JSON Syntax Errors</h3>
+          <p>The most frequent JSON errors: <strong className="text-dark-300">trailing commas</strong> after the last item (valid in JS, invalid in JSON), <strong className="text-dark-300">single quotes</strong> instead of double quotes, <strong className="text-dark-300">unquoted keys</strong> (all keys must be double-quoted strings), <strong className="text-dark-300">comments</strong> (JSON doesn&apos;t support // or /* */), and <strong className="text-dark-300">undefined/NaN values</strong> (use null instead). This formatter identifies these errors instantly with clear messages.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">JSON Format vs Minify</h3>
+          <p>Formatted JSON uses indentation and line breaks for readability — essential during development. Minified JSON removes all whitespace to reduce size — important for API responses and network transfer. This tool supports both: paste minified JSON to beautify it, or click &quot;Minify&quot; to compress. A typical API response shrinks 30–50% when minified.</p>
+
+          <p>All processing runs locally in your browser using JavaScript&apos;s native <code className="text-dark-300">JSON.parse()</code> and <code className="text-dark-300">JSON.stringify()</code>. No data is ever sent to a server.</p>
         </div>
       </section>
     </ToolLayout>

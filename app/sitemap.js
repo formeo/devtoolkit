@@ -22,18 +22,10 @@ export default function sitemap() {
     'json-tree-viewer',
     'http-status-codes',
     'gitlab-ci-generator',
-    {
-      url: `${SITE_URL}/about/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    },
-    {
-      url: `${SITE_URL}/privacy/`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.2,
-    },
+  ];
+
+  const blogPosts = [
+    'blog/postgresql-tuning-guide',
   ];
 
   return [
@@ -48,6 +40,18 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    })),
+    {
+      url: `${SITE_URL}/blog/`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    ...blogPosts.map(post => ({
+      url: `${SITE_URL}/${post}/`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     })),
     {
       url: `${SITE_URL}/about/`,

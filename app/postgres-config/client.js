@@ -289,12 +289,32 @@ export default function Client() {
 
       {/* SEO content */}
       <section className="mt-10 border-t border-dark-700 pt-6">
-        <h2 className="text-base font-bold text-dark-200 mb-3">About PostgreSQL Configuration Tuning</h2>
+        <h2 className="text-base font-bold text-dark-200 mb-3">Free PGTune Alternative — PostgreSQL Configuration Generator</h2>
         <div className="text-xs text-dark-400 leading-relaxed space-y-2">
-          <p>PostgreSQL ships with conservative default settings designed to work on minimal hardware. For production servers, tuning postgresql.conf based on your actual RAM, CPU count, storage type, and workload pattern can improve query performance by 2-10x.</p>
-          <p><strong className="text-dark-300">shared_buffers</strong> is PostgreSQL&apos;s main memory cache — typically 25% of RAM. <strong className="text-dark-300">effective_cache_size</strong> tells the query planner how much total cache (OS + PG) is available. <strong className="text-dark-300">work_mem</strong> controls per-operation memory for sorts and hash joins — too low causes disk spills, too high risks OOM with many concurrent queries.</p>
-          <p>For SSD storage, lowering <strong className="text-dark-300">random_page_cost</strong> to 1.1 tells the planner that random I/O is nearly as fast as sequential, enabling more efficient index scans. Parallel query settings scale with CPU cores — data warehouse workloads benefit from higher parallelism.</p>
-          <p>This generator follows the same algorithms as PGTune, adapted from PostgreSQL documentation and community best practices. All calculations run in your browser.</p>
+          <p>This tool generates optimized <code className="text-dark-300">postgresql.conf</code> settings based on your server&apos;s RAM, CPU cores, storage type, and workload profile. It follows the same tuning algorithms as <strong className="text-dark-300">PGTune</strong>, adapted from official PostgreSQL documentation and community best practices. Unlike PGTune, it runs entirely in your browser — your server specs are never sent to any external server.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">How shared_buffers Is Calculated</h3>
+          <p><strong className="text-dark-300">shared_buffers</strong> is PostgreSQL&apos;s primary memory cache for table and index data. The recommended starting point is 25% of total system RAM. For a server with 16 GB RAM, that&apos;s 4 GB. For desktop and development use, 128 MB to 512 MB is usually sufficient. On systems with more than 64 GB RAM, you can allocate up to 40% for shared_buffers, though going beyond 8–16 GB often shows diminishing returns as the OS page cache becomes more efficient.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">Understanding work_mem</h3>
+          <p><strong className="text-dark-300">work_mem</strong> controls how much memory each sort operation, hash join, or hash-based aggregation can use before spilling to disk. The formula is: <code className="text-dark-300">(RAM − shared_buffers) / (max_connections × 3)</code>. The ×3 factor accounts for multiple operations per query. Setting work_mem too low causes frequent disk sorts (visible as &quot;Sort Method: external merge Disk&quot; in EXPLAIN ANALYZE). Setting it too high risks out-of-memory errors when many connections run complex queries simultaneously.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">effective_cache_size Explained</h3>
+          <p><strong className="text-dark-300">effective_cache_size</strong> tells the query planner how much memory is available for caching data files, including both shared_buffers and the OS page cache. It is typically set to 75% of total system RAM. This parameter doesn&apos;t allocate memory — it only affects cost estimates, encouraging index scans when sufficient cache is expected.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">SSD vs HDD Settings</h3>
+          <p>For SSD storage, <strong className="text-dark-300">random_page_cost</strong> should be set to 1.1 (default is 4.0) because random reads on SSD are nearly as fast as sequential reads. This dramatically changes the planner&apos;s behavior — it will prefer index scans over sequential scans much more often. <strong className="text-dark-300">effective_io_concurrency</strong> should be set to 200 for SSD (default 1), allowing PostgreSQL to issue multiple I/O requests in parallel.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">Tuning for Different Workloads</h3>
+          <p><strong className="text-dark-300">Web applications</strong> (Django, Rails, Laravel) typically have many connections (100–500) running simple queries — prioritize higher max_connections and lower work_mem. <strong className="text-dark-300">OLTP workloads</strong> need fast single-row lookups — optimize for low latency with checkpoint tuning. <strong className="text-dark-300">Data warehouses</strong> run few connections with complex analytical queries — maximize work_mem, maintenance_work_mem, and enable aggressive parallelism.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">PostgreSQL on Cloud (AWS RDS, DigitalOcean, Hetzner)</h3>
+          <p>On managed services like AWS RDS, some parameters are set automatically. However, you can still tune work_mem, effective_cache_size, and random_page_cost through parameter groups. On self-hosted servers (DigitalOcean, Hetzner, Linode), use this generator to create a complete postgresql.conf optimized for your instance size.</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">PGTune vs DevToolKit PostgreSQL Config Generator</h3>
+          <p>Both tools use similar algorithms based on PostgreSQL community recommendations. Key differences: DevToolKit runs 100% in your browser (no data sent to servers), provides explanations for each parameter, generates a copyable configuration block, and shows quick summary cards for key values. PGTune has been the go-to tool for years, but its interface hasn&apos;t been updated recently. This generator is a modern, privacy-respecting alternative.</p>
+
+          <p className="mt-3"><strong className="text-dark-300">Want to understand each parameter in depth?</strong> Read our <a href="/blog/postgresql-tuning-guide/" className="text-brand-400 hover:underline">PostgreSQL Performance Tuning Guide 2026</a> — complete formulas, recommended values by server size, and best practices.</p>
         </div>
       </section>
     </ToolLayout>

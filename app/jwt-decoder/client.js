@@ -39,10 +39,20 @@ export default function Client() {
     
       {/* SEO content */}
       <section className="mt-10 border-t border-dark-700 pt-6">
-        <h2 className="text-base font-bold text-dark-200 mb-3">About JWT Tokens</h2>
+        <h2 className="text-base font-bold text-dark-200 mb-3">About JSON Web Tokens (JWT)</h2>
         <div className="text-xs text-dark-400 leading-relaxed space-y-2">
-          <p>JSON Web Tokens (JWT) are the standard for stateless authentication in modern web applications. A JWT has three parts: header (algorithm and type), payload (claims like user ID, roles, and expiration), and signature. The header and payload are Base64URL-encoded, not encrypted &mdash; anyone can read them.</p>
-          <p>This decoder splits a JWT into its components, shows all claims in a readable format, and checks if the token is expired. Essential for debugging OAuth2 flows, API authentication issues, and SSO integrations. No data is sent to any server &mdash; your tokens stay in your browser.</p>
+          <p>JSON Web Tokens (JWT) are the industry standard for stateless authentication in modern web applications, APIs, and microservices. Defined in <strong className="text-dark-300">RFC 7519</strong>, a JWT is a compact, URL-safe token that carries claims between two parties. JWTs are widely used in OAuth 2.0, OpenID Connect, and single sign-on (SSO).</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">JWT Structure: Header, Payload, Signature</h3>
+          <p>Every JWT has three Base64URL-encoded parts separated by dots: <code className="text-dark-300">header.payload.signature</code>. The <strong className="text-dark-300">header</strong> specifies the signing algorithm (HS256, RS256, ES256) and token type. The <strong className="text-dark-300">payload</strong> contains claims — standard ones like <code className="text-dark-300">iss</code> (issuer), <code className="text-dark-300">exp</code> (expiration), <code className="text-dark-300">sub</code> (subject), and <code className="text-dark-300">iat</code> (issued at), plus custom claims like user roles. The <strong className="text-dark-300">signature</strong> is a cryptographic hash signed with a secret (HMAC) or private key (RSA/ECDSA).</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">Why Decode JWT Tokens?</h3>
+          <p>Decoding a JWT is essential when debugging authentication flows: verifying the payload contains the correct user ID and roles, checking the <code className="text-dark-300">exp</code> claim for expiration, inspecting <code className="text-dark-300">iss</code> and <code className="text-dark-300">aud</code> claims to confirm the token issuer, and validating the algorithm in the header matches your server&apos;s expectations (to prevent algorithm confusion attacks).</p>
+
+          <h3 className="text-sm font-semibold text-dark-300 mt-4 mb-2">JWT Security Best Practices</h3>
+          <p>JWTs are Base64-encoded, <strong className="text-dark-300">not encrypted</strong> — anyone with the token can read the payload. Never store passwords or credit card numbers in claims. Always verify signatures server-side. Set short expiration times (15–60 min for access tokens) and use refresh tokens for long sessions. Prefer <code className="text-dark-300">RS256</code> (asymmetric) over <code className="text-dark-300">HS256</code> (symmetric) in distributed systems.</p>
+
+          <p>This decoder runs entirely in your browser. Your tokens are never sent to any server — paste, inspect claims, and check expiration safely. Works with tokens from Auth0, Firebase Auth, AWS Cognito, Keycloak, and any OAuth 2.0 provider.</p>
         </div>
       </section>
     </ToolLayout>

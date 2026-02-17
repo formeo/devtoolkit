@@ -64,6 +64,11 @@ export default function HomePage() {
           </p>
         </div>
 
+        <h2 className="text-lg font-bold text-dark-200 mb-4 mt-8">Guides</h2>
+        <div className="text-sm text-dark-400 leading-relaxed space-y-2">
+          <p><a href="/blog/postgresql-tuning-guide/" className="text-brand-400 hover:underline font-medium">PostgreSQL Performance Tuning Guide 2026</a> — Complete configuration reference with formulas, recommended values by server size, and best practices for shared_buffers, work_mem, and effective_cache_size.</p>
+        </div>
+
         <h2 className="text-lg font-bold text-dark-200 mb-4 mt-8">Available Tools</h2>
         <div className="text-sm text-dark-400 leading-relaxed space-y-2">
           <p><strong className="text-dark-200">JSON Formatter & Validator</strong> — Format, beautify, minify, and validate JSON data online with customizable indentation.</p>
