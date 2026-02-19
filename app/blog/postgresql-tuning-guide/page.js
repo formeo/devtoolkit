@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'PostgreSQL Performance Tuning Guide 2026 — Free PGTune Alternative',
+  title: 'PostgreSQL Tuning Guide 2026 — Free PGTune Alternative',
   description: 'Complete postgresql.conf tuning guide: shared_buffers, work_mem, effective_cache_size, WAL settings. With free online config generator.',
   alternates: { canonical: '/blog/postgresql-tuning-guide/' },
   keywords: ['postgresql tuning guide', 'postgres performance', 'pgtune guide', 'postgresql.conf optimization', 'shared_buffers tuning', 'work_mem calculation', 'postgres config for 16gb', 'postgres config for 32gb'],

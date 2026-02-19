@@ -19,4 +19,5 @@ export const TOOLS = [
   { id: 'json-tree-viewer', name: 'JSON Tree', icon: '🌳', category: 'Data', desc: 'Visualize JSON as a tree' },
   { id: 'http-status-codes', name: 'HTTP Codes', icon: '↩', category: 'Reference', desc: 'HTTP status code lookup' },
   { id: 'gitlab-ci-generator', name: 'GitLab CI', icon: '🦊', category: 'DevOps', desc: 'Build .gitlab-ci.yml pipelines' },
+  { id: 'nginx-config', name: 'Nginx Config', icon: '⚙', category: 'DevOps', desc: 'Build nginx.conf configs' },
 ];

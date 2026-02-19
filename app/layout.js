@@ -31,7 +31,7 @@ export const metadata = {
     siteName: 'DevToolKit',
     type: 'website',
     locale: 'en_US',
-    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'DevToolKit — 20 Free Developer Tools' }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'DevToolKit — 21 Free Developer Tools' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
               "operatingSystem": "Any",
               "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
               "browserRequirements": "Requires a modern web browser",
-              "featureList": "JSON Formatter, JSON Tree Viewer, YAML-JSON Converter, Base64 Encoder, JWT Decoder, URL Encoder, Hash Generator, UUID Generator, Regex Tester, Timestamp Converter, Color Converter, Lorem Ipsum Generator, Diff Checker, Password Generator, QR Code Generator, SQL Formatter, Cron Parser, PostgreSQL Config Generator, HTTP Status Codes, GitLab CI/CD Generator"
+              "featureList": "JSON Formatter, JSON Tree Viewer, YAML-JSON Converter, Base64 Encoder, JWT Decoder, URL Encoder, Hash Generator, UUID Generator, Regex Tester, Timestamp Converter, Color Converter, Lorem Ipsum Generator, Diff Checker, Password Generator, QR Code Generator, SQL Formatter, Cron Parser, PostgreSQL Config Generator, HTTP Status Codes, GitLab CI/CD Generator, Nginx Config Generator"
             })
           }}
         />

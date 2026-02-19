@@ -22,10 +22,13 @@ export default function sitemap() {
     'json-tree-viewer',
     'http-status-codes',
     'gitlab-ci-generator',
+    'nginx-config',
   ];
 
   const blogPosts = [
     'blog/postgresql-tuning-guide',
+    'blog/nginx-configuration-guide',
+    'blog/gitlab-ci-cd-guide',
   ];
 
   return [
